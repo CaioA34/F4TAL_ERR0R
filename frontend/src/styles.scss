@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+/* Em src/styles.css */
+
+body {
+  margin: 0;
+}
+
+/* Em src/styles.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Melhora o cálculo de tamanho dos elementos */
+}
+
+/* Opcional, mas bom para o layout geral */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Evita barras de rolagem indesejadas na página inteira */
+}

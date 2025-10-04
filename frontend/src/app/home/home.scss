@@ -1,0 +1,151 @@
+:host {
+  // Variáveis de cor (use as que você já definiu no app.scss ou styles.scss)
+  --bg-main: #2c2c2c;
+  --bg-secondary: #e0e0e0;
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --accent-color: #007acc;
+  --accent-hover: #0099ff;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  padding: 1.5rem;
+}
+
+/* Header e Menu */
+.home-header {
+  width: 100%;
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--bg-secondary);
+  }
+}
+
+/* Conteúdo Principal */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* Barra de Busca */
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 3rem;
+
+  .search-bar {
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 20px;
+    border: 1px solid var(--bg-secondary);
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    outline: none;
+  }
+  // Ícone de busca (placeholder, idealmente usar um SVG)
+  .search-icon::before {
+    content: '🔍';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+}
+
+/* Carrossel */
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  // Esconde a barra de rolagem visualmente
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  padding: 0 1rem; // Espaço para não cortar as bordas
+}
+
+.carousel-item {
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+
+  .item-circle {
+    width: 80px;
+    height: 80px;
+    background-color: #888;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-weight: 500;
+  }
+
+  &.active {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+/* Seção de Informações */
+.info-section {
+  text-align: left;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 3rem;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.cta-button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--accent-hover);
+  }
+}

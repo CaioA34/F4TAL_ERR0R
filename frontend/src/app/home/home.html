@@ -1,0 +1,39 @@
+<div class="home-container">
+
+  <header class="home-header">
+    <button class="menu-btn">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </header>
+
+  <main class="home-content">
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Buscar mapas...">
+      <i class="search-icon"></i>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div
+          *ngFor="let item of carouselItems"
+          class="carousel-item"
+          (click)="selectItem(item)"
+          [class.active]="item === selectedItem">
+
+          <div class="item-circle">
+            </div>
+          <p>{{ item.name }}</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="info-section" *ngIf="selectedItem">
+      <h2>{{ selectedItem.info.title }}</h2>
+      <p>{{ selectedItem.info.description }}</p>
+      <button class="cta-button" [routerLink]="selectedItem.route">Explorar Mapa</button>
+    </section>
+
+  </main>
+</div>
