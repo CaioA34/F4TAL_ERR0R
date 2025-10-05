@@ -132,3 +132,10 @@
   height: 100%;
   width: 100%;
 }
+
+.overlay-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}

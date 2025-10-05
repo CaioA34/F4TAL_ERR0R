@@ -24,8 +24,26 @@
         <p>Clique em uma área no mapa para habilitar as opções de ampliação.</p>
         <button class="enhance-btn" disabled>Ampliar Imagem</button>
       </div>
-    </aside>
+    <div class="control-group">
+        <h3>Análise de Imagem</h3>
+        <p>Clique em uma área no mapa para habilitar as opções de ampliação.</p>
+        <button class="enhance-btn" disabled>Ampliar Imagem</button>
+      </div>
 
+      <div class="control-group">
+        <h3>Comparar com Data Anterior</h3>
+
+        <div class="overlay-control">
+          <label for="overlay-toggle">Habilitar Overlay</label>
+          <input type="checkbox" id="overlay-toggle" (change)="toggleOverlay($event)">
+        </div>
+
+        <div class="overlay-control">
+          <label for="opacity-slider">Transparência</label>
+          <input type="range" id="opacity-slider" min="0" max="1" step="0.1" [value]="overlayOpacity" (input)="changeOpacity($event)">
+        </div>
+      </div>
+      </aside>
     <div class="map-container">
       <div id="leaflet-map"></div>
     </div>
