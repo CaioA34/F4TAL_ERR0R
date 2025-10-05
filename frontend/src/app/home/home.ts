@@ -4,7 +4,7 @@ import { RouterLink } from '@angular/router';
 // Use string paths for assets instead of importing them in TypeScript.
 const marsImageUrl = 'assets/mars.png';
 const earthImageUrl = 'assets/earth.png';
-
+const nebulaImageUrl= 'assets/Andromeda.jpg'
 interface CarouselItem {
   id: number;
   name: string;

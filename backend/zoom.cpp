@@ -30,7 +30,7 @@ int main() {
     //}
 
     Mat displayOriginal, displayResized;
-    normalize(img64f, displayOriginal, 0, 255, NORM_MINMAX);
+    normalize(img, displayOriginal, 0, 255, NORM_MINMAX);
     normalize(resized, displayResized, 0, 255, NORM_MINMAX);
     displayOriginal.convertTo(displayOriginal, CV_8UC1);
     displayResized.convertTo(displayResized, CV_8UC1);
