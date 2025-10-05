@@ -23,7 +23,8 @@
           [class.active]="item === selectedItem">
 
           <div class="item-circle">
-            </div>
+            <img *ngIf="item.imageUrl" [src]="item.imageUrl" [alt]="item.name">
+          </div>
           <p>{{ item.name }}</p>
         </div>
       </div>
