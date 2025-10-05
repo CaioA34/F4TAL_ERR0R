@@ -196,7 +196,7 @@
 }
 
 .info-section {
-  text-align: left;
+  text-align: center; // Center all content
   width: 100%;
   max-width: 600px;
   margin-top: 1rem;
@@ -216,5 +216,19 @@
 }
 
 .cta-button {
-  display: none;
+  display: block; // Make button a block element
+  margin: 1.5rem auto 0 auto; // Center horizontally
+  padding: 0.75rem 2rem;
+  background: var(--accent-red);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: var(--accent-red-hover);
+  }
 }

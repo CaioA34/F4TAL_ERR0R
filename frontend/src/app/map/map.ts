@@ -33,11 +33,11 @@ export class MapComponent implements AfterViewInit {
     const bounds: [[number, number], [number, number]] = [[0, 0], [height, width]];
 
     // --- CAMADA BASE (JÁ EXISTENTE) ---
-    const tileUrl = `${environment.baseUrl}/mars_tiles/base/{z}/{x}/{y}.png`; // Ajuste na URL
+    const tileUrl = 'https://astrogeology.usgs.gov/tiles/Mars_Viking_MDIM21_ClrMosaic_global/{z}/{x}/{y}.png';
     L.tileLayer(tileUrl, {
-      bounds: bounds,
-      noWrap: true,
-      attribution: 'NASA/JPL-Caltech/USGS'
+      attribution: 'NASA/USGS Astrogeology',
+      maxZoom: 8,
+      minZoom: 0
     }).addTo(this.map);
 
     // --- CRIAÇÃO DA CAMADA DE OVERLAY (NOVO) ---
