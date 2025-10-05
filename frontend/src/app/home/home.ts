@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+// Use string paths for assets instead of importing them in TypeScript.
+const marsImageUrl = 'assets/mars.png';
+const earthImageUrl = 'assets/earth.png';
 
 interface CarouselItem {
   id: number;
@@ -29,7 +32,7 @@ carouselItems: CarouselItem[] = [
       name: 'Marte',
       route: '/map',
       // CORREÇÃO 1: Usando a imagem correta de Marte e o caminho correto.
-      imageUrl: 'assets/images/mars.png',
+      imageUrl: marsImageUrl,
       info: {
         title: 'Exploração de Marte',
         description: 'Navegue por um mosaico de alta resolução da cratera Jezero, o local de pouso do rover Perseverance da NASA. Explore deltas de rios antigos e procure por sinais de vida passada.'
@@ -40,7 +43,7 @@ carouselItems: CarouselItem[] = [
       name: 'Terra',
       route: '/map-2',
       // CORREÇÃO 2: O caminho deve ser sempre a partir da raiz 'assets/'.
-      imageUrl: 'assets/images/earth.png',
+      imageUrl: earthImageUrl,
       info: {
         title: 'Mapa da Terra (Exemplo)',
         description: 'Descrição detalhada sobre o que o usuário encontrará no mapa de exemplo 2.'
